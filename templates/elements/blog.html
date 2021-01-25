@@ -1,0 +1,16 @@
+{{ define "content" }}
+{{ range .Posts }}
+    <article class="article-item">
+        <div class="article-item-links">
+            <a href="/blog/{{ .PostID }}/">{{ .Title }}</a>
+            <ul class="article-tags">
+                <li class="comma">TAGS:</li>
+                <li class="comma"><a href="#">BLOG</a></li>
+                <li class="comma"><a href="#">BLOG</a></li>
+                <li class="comma"><a href="#">BLOG</a></li>
+            </ul>
+        </div>
+        <h2>{{ .CreatedAt.Format "02 Jan 2006" }}</h2>
+    </article>
+{{ end}}
+{{ end}}

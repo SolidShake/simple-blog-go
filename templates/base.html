@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Artem Utkin Blog</title>
+        <link rel="stylesheet" href="/static/css/base.css">
+    </head>
+    <body>
+        <div id="container" class="outer">
+            {{ template "header"}}
+            {{ template "content" .}}
+            {{ template "footer" }}
+        </div>
+    </body>
+</html>

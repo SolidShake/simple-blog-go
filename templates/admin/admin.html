@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Artem Utkin Blog</title>
+        <link rel="stylesheet" href="/static/css/base.css">
+        <link rel="stylesheet" href="/static/css/admin.css">
+    </head>
+    <body>
+        <div id="container" class="outer">
+            <header id="header">
+                <div id="header-inner">
+                    <a href="/" id="main-logo">Artem Utkin</a>
+                </div>
+            </header>
+            <section id="main" class="outer">
+                <div>
+                    <ul class="tag-list">
+                        {{ range .Tags }}
+                            <li class="tag-list-item"><b>#{{ .Name }}</b> <a class="tag-list-links" href="/admin/tag/edit/{{ .ID }}">ред.</a></li>
+                        {{ end }}
+                    </ul>
+                    <a class="tag-new-link" href="/admin/tag/create">Создать новый тег</a>
+                </div>
+                <div>
+                    {{ . }}
+                    <ul class="post-list">
+                        {{ range .Posts }}
+                            <li class="post-list-item"><b>#{{ .Title }}</b> <a class="post-list-links" href="/admin/post/edit/{{ .ID }}">ред.</a></li>
+                        {{ end }}
+                    </ul>
+                    tut
+                    <a class="tag-new-link" href="/admin/post/create">Создать новый пост</a>
+                </div>
+            </section>
+            <footer id="footer" class="outer">
+                <small>Artem Utkin 2020</small>
+            </footer>
+        </div>
+    </body>
+</html>

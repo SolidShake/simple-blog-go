@@ -1,0 +1,20 @@
+{{ define "content" }}
+<section id="main" class="outer">
+    <article class="article-item">
+        <div class="article-item-links">
+            <a href="#">{{ .Title }}</a>
+            <ul class="article-tags">
+                <li class="comma">TAGS:</li>
+                <li class="comma"><a href="#">BLOG</a></li>
+                <li class="comma"><a href="#">BLOG</a></li>
+                <li class="comma"><a href="#">BLOG</a></li>
+            </ul>
+        </div>
+        <h2>{{ .CreatedAt.Format "02 Jan 2006" }}</h2>
+    </article>
+    <div>
+        <p>{{ .Content }}</p>
+    </div>
+</section>
+{{ template "comments" }}
+{{ end }}
